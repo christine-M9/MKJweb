@@ -543,3 +543,35 @@ footer {
     display: none;
   }
 }
+/* =========================
+   TEACHING CARD IMAGES (Full View)
+========================= */
+.card-img {
+  width: 100%;              /* full card width */
+  height: 200px;            /* fixed height, adjust if needed */
+  object-fit: contain;      /* show the full image without cropping */
+  border-radius: 10px;      /* rounded corners */
+  margin-bottom: 1rem;      /* spacing below image */
+  background: #f4f6f8;      /* optional: fill blank space around image */
+  box-shadow: 0 6px 15px rgba(31, 60, 136, 0.1); /* soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect to make cards pop */
+.card:hover .card-img {
+  transform: translateY(-5px) scale(1.02); /* subtle lift & zoom */
+  box-shadow: 0 12px 30px rgba(31, 60, 136, 0.2); /* stronger shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-img {
+    height: 180px; /* smaller on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-img {
+    height: 160px; /* smaller on phones */
+  }
+}
