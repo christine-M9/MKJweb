@@ -291,3 +291,230 @@ footer {
 #sessionForm button {
   width: 100%;
 }
+
+/* =========================
+   MOBILE RESPONSIVENESS
+   ========================= */
+
+/* Tablets & small laptops */
+@media (max-width: 992px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 68px;
+    height: 68px;
+  }
+
+ @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;  /* stack vertically */
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .hamburger {
+    position: absolute;    /* stay at top-right */
+    right: 1.5rem;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 200;          /* above nav-links */
+  }
+
+  .nav-links {
+    display: none;        /* hidden by default */
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    margin-top: 4rem;      /* space for hamburger */
+    border-top: 1px solid #e6ecf5;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+  }
+ }
+
+
+  .nav-links li {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    width: 100%;
+    display: block;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* SECTIONS */
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  .center-text {
+    font-size: 0.95rem;
+  }
+
+  /* ABOUT IMAGE */
+  .passport {
+    width: 130px;
+    height: 130px;
+  }
+
+  /* GRID */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  /* BOOK COVERS */
+  .book-cover {
+    height: 220px;
+  }
+
+  /* BOOK SESSION BUTTON */
+  #book-session .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  /* CONTACT */
+  #contact p {
+    font-size: 1rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .logo span {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 1.2rem;
+  }
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #1f3c88;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid #e6ecf5;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+  }
+}
