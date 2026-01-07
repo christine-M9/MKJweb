@@ -16,6 +16,11 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     if (navLinksContainer) {
       navLinksContainer.classList.remove('show');
     }
+
+    // Show logo again when menu closes
+    if (logo) {
+      logo.classList.remove('hide');
+    }
   });
 });
 
@@ -50,10 +55,12 @@ window.addEventListener('scroll', () => {
 ========================= */
 const hamburger = document.getElementById('hamburger');
 const navLinksContainer = document.getElementById('navLinks');
+const logo = document.querySelector('.logo'); // select the logo
 
-if (hamburger && navLinksContainer) {
+if (hamburger && navLinksContainer && logo) {
   hamburger.addEventListener('click', () => {
     navLinksContainer.classList.toggle('show');
+    logo.classList.toggle('hide'); // hide/show logo on mobile
   });
 }
 

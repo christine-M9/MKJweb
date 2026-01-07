@@ -485,20 +485,41 @@ footer {
   transition: 0.3s ease;
 }
 
-/* MOBILE NAV */
+/* Mobile */
 @media (max-width: 768px) {
 
-  .hamburger {
-    display: flex;
+  /* Navbar scrolls with page, not sticky */
+  .navbar {
+    position: relative; /* remove sticky */
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
   }
 
+  .logo img {
+    width: 68px;
+    height: 68px;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  /* Mobile nav-links */
   .nav-links {
-    display: none;
+    display: none;            /* hidden by default */
     flex-direction: column;
     width: 100%;
-    background: #ffffff;
-    margin-top: 1rem;
-    padding: 1rem 0;
+    position: relative;       /* scrolls with content */
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
     border-top: 1px solid #e6ecf5;
   }
 
@@ -508,13 +529,17 @@ footer {
 
   .nav-links li {
     width: 100%;
-    text-align: left;
     padding: 0.5rem 1.5rem;
   }
 
   .nav-links a {
-    font-size: 1rem;
     display: block;
     width: 100%;
+  }
+}
+/* Mobile nav-links dropdown hides logo */
+@media (max-width: 768px) {
+  .logo.hide {
+    display: none;
   }
 }
